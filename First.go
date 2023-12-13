@@ -2,8 +2,15 @@ package Hangman
 
 import (
 	"flag"
+	"fmt"
 	"os"
 )
+
+func Test() string {
+	fmt.Print("ca marche bg")
+	ok := "bien jouer bg"
+	return ok
+}
 
 func First() {
 	var H *HangManData //pointer initialisation
