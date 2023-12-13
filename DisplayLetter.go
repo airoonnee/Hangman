@@ -15,4 +15,5 @@ func DisplayLetter(H *HangManData) bool {
 		return true
 	}
 	return false
+
 }
