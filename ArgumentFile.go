@@ -5,13 +5,11 @@ import (
 	"os"
 )
 
-func File() string {
+func File(filetxt string) string {
 	// Check that the filename argument has been supplied
-	if len(os.Args) < 2 {
-		fmt.Println("the file name is not provided")
-	}
+
 	// Get the file name from the command line arguments
-	fileName := os.Args[1]
+	fileName := "words.txt"
 	return fileName
 }
 
