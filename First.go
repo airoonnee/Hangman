@@ -9,7 +9,6 @@ import (
 func Test() string {
 	fmt.Print("ca marche bg")
 	ok := "bien jouer bg"
-
 	return ok
 }
 
