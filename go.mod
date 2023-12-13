@@ -1,4 +1,4 @@
-module Hangman
+module github.com/airoonnee/Hangman
 
 go 1.21.0
 
