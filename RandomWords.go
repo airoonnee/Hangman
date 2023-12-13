@@ -12,7 +12,7 @@ import (
 // choose a word at random
 func Word() string {
 	// Open the file for reading
-	file, err := os.Open(File())
+	file, err := os.Open("words.txt")
 	if err != nil {
 		fmt.Println("Error opening file:", err)
 	}
