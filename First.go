@@ -24,10 +24,8 @@ func First() {
 	// or whether he wants to start the game he has saved
 	if len(os.Args) == 3 {
 		if os.Args[2] == "--letterFile" {
-			H.ToFind = Word()
-			H.Word = UnderscoreWord(H)
-			H.HangmanPositions = [10]int{72, 64, 56, 48, 40, 32, 24, 16, 8, 0}
-			H.Attempts = 0
+			Valiu(H)
+
 			Forme(H)
 		} else if os.Args[1] == "--startWith" && os.Args[2] == "save.txt" {
 			LoadGame("save.txt", H)
@@ -36,10 +34,14 @@ func First() {
 			os.Exit(1)
 		}
 	} else {
-		H.ToFind = Word()
-		H.Word = UnderscoreWord(H)
-		H.HangmanPositions = [10]int{72, 64, 56, 48, 40, 32, 24, 16, 8, 0}
-		H.Attempts = 0
+		Valiu(H)
 		Forme(H)
 	}
+}
+
+func Valiu(H *HangManData) {
+	H.ToFind = Word()
+	H.Word = UnderscoreWord(H)
+	H.HangmanPositions = [10]int{72, 64, 56, 48, 40, 32, 24, 16, 8, 0}
+	H.Attempts = 0
 }
