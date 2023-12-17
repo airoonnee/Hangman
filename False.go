@@ -16,11 +16,11 @@ func False(H *HangManData) string {
 	fileScanner := bufio.NewScanner(file)
 	Line := 0
 	for fileScanner.Scan() {
-		if H.Attempts >= 10 {
+		if H.Attempts <= 0 {
 			if Line >= 72 && Line <= 80 {
 				Drow += fileScanner.Text() + "\n"
 			}
-		} else if Line >= H.HangmanPositions[9-H.Attempts+1] && Line < H.HangmanPositions[9-H.Attempts] && H.Attempts <= 9 {
+		} else if Line >= H.HangmanPositions[H.Attempts] && Line < H.HangmanPositions[H.Attempts-1] && H.Attempts <= 9 {
 			Drow += fileScanner.Text() + "\n"
 		}
 		Line++
