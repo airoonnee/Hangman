@@ -165,11 +165,11 @@ func Game(H *HangManData) {
 							Loose(H)
 						}
 					} else {
-						H.message = "This character has been used before, retry :"
+						H.Message = "This character has been used before, retry :"
 					}
 				}
 			} else {
-				H.message = "This is not a lower case letter, retry :"
+				H.Message = "This is not a lower case letter, retry :"
 			}
 		}
 	} else { // if it enters a word that is not the same size as the word to be searched for
@@ -188,11 +188,11 @@ func Game(H *HangManData) {
 							Loose(H)
 						}
 					} else {
-						H.message = "This character has been used before, retry :"
+						H.Message = "This character has been used before, retry :"
 					}
 				}
 			} else {
-				H.message = "This is not a lower case letter, retry :"
+				H.Message = "This is not a lower case letter, retry :"
 
 			}
 		}
