@@ -142,3 +142,60 @@ func Forme(H *HangManData) {
 		panic(err)
 	}
 }
+
+func Game(H *HangManData) {
+	Input := strings.Split(H.Input, "")
+	Word := strings.Split(H.ToFind, "")
+	if len(Input) == 1 || len(Input) == len(Word) { // check whether a letter or word is entered
+		c := 0
+		for i := 0; i < len(Input); i++ {
+			if Input[i] >= "a" && Input[i] <= "z" {
+				c++
+				if c == len(Input) {
+					DisplayLetter(H)
+					if !DisplayLetter(H) {
+						Check(H)
+						H.Letter += H.Input
+						H.Letter += " "
+						VerificationForWin(H)
+						if VerificationForWin(H) {
+							Win(H)
+						}
+						if H.Attempts >= 10 {
+							Loose(H)
+						}
+					} else {
+						H.message = "This character has been used before, retry :"
+					}
+				}
+			} else {
+				H.message = "This is not a lower case letter, retry :"
+			}
+		}
+	} else { // if it enters a word that is not the same size as the word to be searched for
+		c := 0
+		for i := 0; i < len(Input); i++ {
+			if Input[i] >= "a" && Input[i] <= "z" {
+				c++
+				if c == len(Input) {
+					DisplayLetter(H)
+					if !DisplayLetter(H) {
+						H.Attempts -= 2
+						False(H)
+						H.Letter += H.Input
+						H.Letter += " "
+						if H.Attempts >= 10 {
+							Loose(H)
+						}
+					} else {
+						H.message = "This character has been used before, retry :"
+					}
+				}
+			} else {
+				H.message = "This is not a lower case letter, retry :"
+
+			}
+		}
+	}
+
+}

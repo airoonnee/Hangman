@@ -9,4 +9,5 @@ type HangManData struct {
 	Drow             string
 	Letter           string
 	Ascii            string
+	message          string
 }
