@@ -44,4 +44,5 @@ func Valiu(H *HangManData) {
 	H.Word = UnderscoreWord(H)
 	H.HangmanPositions = [10]int{72, 64, 56, 48, 40, 32, 24, 16, 8, 0}
 	H.Attempts = 10
+	H.Num = 0
 }
