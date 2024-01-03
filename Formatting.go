@@ -166,7 +166,7 @@ func Game(H *HangManData) {
 							return
 
 						}
-						if H.Attempts >= 10 {
+						if H.Attempts <= 0 {
 							// Loose(H)
 							H.Num = 2
 							return
@@ -195,7 +195,7 @@ func Game(H *HangManData) {
 						False(H)
 						H.Letter += H.Input
 						H.Letter += " "
-						if H.Attempts >= 10 {
+						if H.Attempts <= 0 {
 							H.Num = 2
 							return
 							// Loose(H)
