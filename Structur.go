@@ -11,4 +11,5 @@ type HangManData struct {
 	Ascii            string
 	Message          string
 	Num              int
+	File             string
 }

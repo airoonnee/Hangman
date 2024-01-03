@@ -10,9 +10,9 @@ import (
 )
 
 // choose a word at random
-func Word() string {
+func Word(H *HangManData) string {
 	// Open the file for reading
-	file, err := os.Open("words.txt")
+	file, err := os.Open(H.File)
 	if err != nil {
 		fmt.Println("Error opening file:", err)
 	}
