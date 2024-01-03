@@ -161,21 +161,21 @@ func Game(H *HangManData) {
 						VerificationForWin(H)
 						if VerificationForWin(H) {
 							// Win(H)
-							H.Num += 1
+							H.Num = 1
 
 						}
 						if H.Attempts >= 10 {
 							// Loose(H)
-							H.Num += 2
+							H.Num = 2
 						}
 					} else {
 						H.Message = "This character has been used before, retry :"
-						H.Num += 3
+						H.Num = 3
 					}
 				}
 			} else {
 				H.Message = "This is not a lower case letter, retry :"
-				H.Num += 3
+				H.Num = 3
 			}
 		}
 	} else { // if it enters a word that is not the same size as the word to be searched for
@@ -191,20 +191,20 @@ func Game(H *HangManData) {
 						H.Letter += H.Input
 						H.Letter += " "
 						if H.Attempts >= 10 {
-							H.Num += 2
+							H.Num = 2
 							// Loose(H)
 						}
 					} else {
 						H.Message = "This character has been used before, retry :"
-						H.Num += 3
+						H.Num = 3
 					}
 				}
 			} else {
 				H.Message = "This is not a lower case letter, retry :"
-				H.Num += 3
+				H.Num = 3
 
 			}
 		}
 	}
-	H.Num += 3
+	H.Num = 3
 }
