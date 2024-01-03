@@ -147,6 +147,7 @@ func Game(H *HangManData) {
 	Input := strings.Split(H.Input, "")
 	Word := strings.Split(H.ToFind, "")
 	H.Num = 0
+	H.Message = "Write a word or a letter"
 	if len(Input) == 1 || len(Input) == len(Word) { // check whether a letter or word is entered
 		c := 0
 		for i := 0; i < len(Input); i++ {
@@ -162,24 +163,24 @@ func Game(H *HangManData) {
 						if VerificationForWin(H) {
 							// Win(H)
 							H.Num = 1
-							break
+							return
 
 						}
 						if H.Attempts >= 10 {
 							// Loose(H)
 							H.Num = 2
-							break
+							return
 						}
 					} else {
 						H.Message = "This character has been used before, retry :"
 						H.Num = 3
-						break
+						return
 					}
 				}
 			} else {
 				H.Message = "This is not a lower case letter, retry :"
 				H.Num = 3
-				break
+				return
 			}
 		}
 	} else { // if it enters a word that is not the same size as the word to be searched for
@@ -196,22 +197,23 @@ func Game(H *HangManData) {
 						H.Letter += " "
 						if H.Attempts >= 10 {
 							H.Num = 2
-							break
+							return
 							// Loose(H)
 						}
 					} else {
 						H.Message = "This character has been used before, retry :"
 						H.Num = 3
-						break
+						return
 					}
 				}
 			} else {
 				H.Message = "This is not a lower case letter, retry :"
 				H.Num = 3
-				break
+				return
 
 			}
 		}
 	}
-	H.Num = 3
+	H.Num = 4
+	return
 }
