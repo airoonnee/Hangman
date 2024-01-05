@@ -40,7 +40,7 @@ func First() {
 }
 
 func Valiu(H *HangManData) {
-	H.ToFind = Word()
+	H.ToFind = Word(H)
 	H.Word = UnderscoreWord(H)
 	H.HangmanPositions = [10]int{72, 64, 56, 48, 40, 32, 24, 16, 8, 0}
 	H.Attempts = 10
