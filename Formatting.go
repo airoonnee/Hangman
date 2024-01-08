@@ -105,7 +105,6 @@ func Forme(H *HangManData) {
 							DisplayLetter(H)
 							if !DisplayLetter(H) {
 								H.Attempts += 2
-								False(H)
 								Mot.SetText(AsciiArt(H.Word, H))
 								WriteLetter.SetText("")
 								Hangman.SetText(H.Drow)
