@@ -24,7 +24,7 @@ func First() {
 	// or whether he wants to start the game he has saved
 	if len(os.Args) == 3 {
 		if os.Args[2] == "--letterFile" {
-			Valiu(H)
+			ValiuEasy(H)
 
 			Forme(H)
 		} else if os.Args[1] == "--startWith" && os.Args[2] == "save.txt" {
@@ -34,15 +34,34 @@ func First() {
 			os.Exit(1)
 		}
 	} else {
-		Valiu(H)
+		ValiuEasy(H)
 		Forme(H)
 	}
 }
 
-func Valiu(H *HangManData) {
-	H.ToFind = Word()
+func ValiuEasy(H *HangManData) {
+	H.ToFind = Word(H)
 	H.Word = UnderscoreWord(H)
 	H.HangmanPositions = [10]int{72, 64, 56, 48, 40, 32, 24, 16, 8, 0}
 	H.Attempts = 10
 	H.Num = 0
+	H.File = "words/words.txt"
+}
+
+func ValiuNormal(H *HangManData) {
+	H.ToFind = Word(H)
+	H.Word = UnderscoreWord(H)
+	H.HangmanPositions = [10]int{72, 64, 56, 48, 40, 32, 24, 16, 8, 0}
+	H.Attempts = 10
+	H.Num = 0
+	H.File = "words/words2.txt"
+}
+
+func ValiuHard(H *HangManData) {
+	H.ToFind = Word(H)
+	H.Word = UnderscoreWord(H)
+	H.HangmanPositions = [10]int{72, 64, 56, 48, 40, 32, 24, 16, 8, 0}
+	H.Attempts = 10
+	H.Num = 0
+	H.File = "words/words3.txt"
 }
