@@ -40,28 +40,31 @@ func First() {
 }
 
 func ValiuEasy(H *HangManData) {
+	H.File = "words/words.txt"
 	H.ToFind = Word(H)
 	H.Word = UnderscoreWord(H)
 	H.HangmanPositions = [10]int{72, 64, 56, 48, 40, 32, 24, 16, 8, 0}
 	H.Attempts = 10
 	H.Num = 0
-	H.File = "words/words.txt"
+
 }
 
 func ValiuNormal(H *HangManData) {
+	H.File = "words/words2.txt"
 	H.ToFind = Word(H)
 	H.Word = UnderscoreWord(H)
 	H.HangmanPositions = [10]int{72, 64, 56, 48, 40, 32, 24, 16, 8, 0}
 	H.Attempts = 10
 	H.Num = 0
-	H.File = "words/words2.txt"
+
 }
 
 func ValiuHard(H *HangManData) {
+	H.File = "words/words3.txt"
 	H.ToFind = Word(H)
 	H.Word = UnderscoreWord(H)
 	H.HangmanPositions = [10]int{72, 64, 56, 48, 40, 32, 24, 16, 8, 0}
 	H.Attempts = 10
 	H.Num = 0
-	H.File = "words/words3.txt"
+
 }
