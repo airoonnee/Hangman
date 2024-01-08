@@ -192,7 +192,6 @@ func Game(H *HangManData) {
 					DisplayLetter(H)
 					if !DisplayLetter(H) {
 						H.Attempts -= 2
-						False(H)
 						H.Letter += H.Input
 						H.Letter += " "
 						if H.Attempts <= 0 {
