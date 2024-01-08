@@ -24,7 +24,6 @@ func Check(H *HangManData) string {
 			}
 			if count == 0 { // the letter is not in the word
 				H.Attempts -= 1
-				False(H)
 
 				return H.Word
 			}
@@ -42,7 +41,6 @@ func Check(H *HangManData) string {
 					c++
 				} else {
 					H.Attempts -= 2
-					False(H)
 					return H.Word
 				}
 				if c == len(WordFind) {
