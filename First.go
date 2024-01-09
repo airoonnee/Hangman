@@ -40,7 +40,6 @@ func First() {
 }
 
 func ValiuEasy(H *HangManData) {
-	H.Letter = ""
 	H.File = "words/words.txt"
 
 	H.ToFind = Word(H)
@@ -48,12 +47,9 @@ func ValiuEasy(H *HangManData) {
 	H.HangmanPositions = [10]int{72, 64, 56, 48, 40, 32, 24, 16, 8, 0}
 	H.Attempts = 10
 	H.Num = 0
-	H.Letter = ""
-
 }
 
 func ValiuNormal(H *HangManData) {
-	H.Letter = ""
 	H.File = "words/words2.txt"
 
 	H.ToFind = Word(H)
@@ -61,12 +57,9 @@ func ValiuNormal(H *HangManData) {
 	H.HangmanPositions = [10]int{72, 64, 56, 48, 40, 32, 24, 16, 8, 0}
 	H.Attempts = 10
 	H.Num = 0
-	H.Letter = ""
-
 }
 
 func ValiuHard(H *HangManData) {
-	H.Letter = ""
 	H.File = "words/words3.txt"
 
 	H.ToFind = Word(H)
@@ -74,7 +67,6 @@ func ValiuHard(H *HangManData) {
 	H.HangmanPositions = [10]int{72, 64, 56, 48, 40, 32, 24, 16, 8, 0}
 	H.Attempts = 10
 	H.Num = 0
-	H.Letter = ""
 }
 
 func ClearLetter(H *HangManData) {
