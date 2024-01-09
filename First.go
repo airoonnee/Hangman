@@ -41,6 +41,7 @@ func First() {
 
 func ValiuEasy(H *HangManData) {
 	H.File = "words/words.txt"
+	H.Letter = ""
 	H.ToFind = Word(H)
 	H.Word = UnderscoreWord(H)
 	H.HangmanPositions = [10]int{72, 64, 56, 48, 40, 32, 24, 16, 8, 0}
@@ -51,6 +52,7 @@ func ValiuEasy(H *HangManData) {
 
 func ValiuNormal(H *HangManData) {
 	H.File = "words/words2.txt"
+	H.Letter = ""
 	H.ToFind = Word(H)
 	H.Word = UnderscoreWord(H)
 	H.HangmanPositions = [10]int{72, 64, 56, 48, 40, 32, 24, 16, 8, 0}
@@ -61,6 +63,7 @@ func ValiuNormal(H *HangManData) {
 
 func ValiuHard(H *HangManData) {
 	H.File = "words/words3.txt"
+	H.Letter = ""
 	H.ToFind = Word(H)
 	H.Word = UnderscoreWord(H)
 	H.HangmanPositions = [10]int{72, 64, 56, 48, 40, 32, 24, 16, 8, 0}
