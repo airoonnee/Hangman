@@ -19,6 +19,7 @@ func UnderscoreWord(H *HangManData) string {
 	for p := 0; p < len(Word); p++ { //create a string table of the word find, with each letter in a box
 		revealed = strings.Split(Word, "")
 	}
+	H.Letter = ""
 	var Wordend string
 	TabLetter := []string{}
 	for j := 0; j < revealCount; j++ {

@@ -75,5 +75,8 @@ func ValiuHard(H *HangManData) {
 	H.Attempts = 10
 	H.Num = 0
 	H.Letter = ""
+}
 
+func ClearLetter(H *HangManData) {
+	H.Letter = ""
 }
