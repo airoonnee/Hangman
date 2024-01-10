@@ -12,4 +12,5 @@ type HangManData struct {
 	Message          string
 	Num              int
 	File             string
+	Username         string
 }
