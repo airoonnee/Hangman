@@ -18,3 +18,12 @@ type HangManData struct {
 	DataFile         string
 	ScoreBoard       [][]string
 }
+type Table struct {
+	TUsername string
+	TLevel    string
+	TScore    string
+}
+
+type Library struct {
+	DataLine []*Table
+}
