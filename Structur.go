@@ -16,14 +16,6 @@ type HangManData struct {
 	Score            int
 	Level            string
 	DataFile         string
+	Table            []string
 	ScoreBoard       [][]string
-}
-type Table struct {
-	TUsername string
-	TLevel    string
-	TScore    string
-}
-
-type Library struct {
-	DataLine []*Table
 }
