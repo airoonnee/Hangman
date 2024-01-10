@@ -13,4 +13,6 @@ type HangManData struct {
 	Num              int
 	File             string
 	Username         string
+	Score            int
+	Level            string
 }
