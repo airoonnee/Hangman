@@ -15,4 +15,6 @@ type HangManData struct {
 	Username         string
 	Score            int
 	Level            string
+	DataFile         string
+	ScoreBoard       [][]string
 }
